@@ -1,0 +1,907 @@
+{
+    "status": "started",
+    "associated_apm_deployments": [
+      {
+        "apm_id": "apm1",
+        "enabled": true,
+        "links": {}
+      }
+    ],
+    "links": {},
+    "settings": {
+      "curation": {
+        "specs": []
+      },
+      "dedicated_masters_threshold": 6,
+      "snapshot": {
+        "enabled": true,
+        "suspended": [],
+        "repository": {
+          "static": {
+            "repository_type": "s3-resource",
+            "settings": {
+              "aws_account": "ops-6",
+              "region": "us-east-1",
+              "bucket_name": "bucket-name",
+              "client_name": "elastic-internal-03a15"
+            }
+          }
+        },
+        "retention": {}
+      },
+      "metadata": {
+        "subscription_level": "standard",
+        "hidden": false,
+        "name": "",
+        "resources": {
+          "cpu": {
+            "boost": true,
+            "hard_limit": true
+          }
+        },
+        "owner_id": "9876"
+      }
+    },
+    "healthy": true,
+    "region": "us-east-1",
+    "metadata": {
+      "last_modified": "2019-02-15T04:28:23.671Z",
+      "endpoint": "037b15d7445c1202989ad2.us-east-1.aws.found.io",
+      "ports": {
+        "http": 9200,
+        "https": 9243
+      },
+      "version": 35,
+      "cloud_id": ":foo=="
+    },
+    "snapshots": {
+      "count": 101,
+      "scheduled_time": "2019-02-21T22:58:02.533Z",
+      "latest_end_time": "2019-02-21T22:28:02.533Z",
+      "healthy": true,
+      "latest_successful": true,
+      "recent_success": true,
+      "latest_successful_end_time": "2019-02-21T22:28:02.533Z",
+      "latest_status": "SUCCESS"
+    },
+    "deployment_name": "Production deployment",
+    "plan_info": {
+      "healthy": true,
+      "current": {
+        "attempt_end_time": "2019-01-27T23:34:25.716Z",
+        "healthy": true,
+        "source": {
+          "date": "2019-01-27T23:26:59.166Z",
+          "action": "elasticsearch.move-instances",
+          "remote_addresses": [
+            "52.28.156.28"
+          ],
+          "facilitator": "adminconsole",
+          "admin_id": "some.admin"
+        },
+        "plan_attempt_log": [
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.316Z",
+            "duration_in_millis": 45,
+            "completed": "2019-01-27T23:26:59.361Z",
+            "step_id": "plan-validator",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.366Z",
+            "duration_in_millis": 20,
+            "completed": "2019-01-27T23:26:59.386Z",
+            "step_id": "resolve-current-instance-states",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.392Z",
+            "duration_in_millis": 18,
+            "completed": "2019-01-27T23:26:59.410Z",
+            "step_id": "calculate-incremental-elasticsearch-change",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.419Z",
+            "duration_in_millis": 11,
+            "completed": "2019-01-27T23:26:59.430Z",
+            "step_id": "resolve-instances-acls",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.437Z",
+            "duration_in_millis": 7,
+            "completed": "2019-01-27T23:26:59.444Z",
+            "step_id": "validate-plan-safety",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.451Z",
+            "duration_in_millis": 7,
+            "completed": "2019-01-27T23:26:59.458Z",
+            "step_id": "validate-elasticsearch-plugin-versions",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.464Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:26:59.473Z",
+            "step_id": "ensure-s3-resources",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.479Z",
+            "duration_in_millis": 11,
+            "completed": "2019-01-27T23:26:59.490Z",
+            "step_id": "ensure-shield-system-key",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.496Z",
+            "duration_in_millis": 6,
+            "completed": "2019-01-27T23:26:59.502Z",
+            "step_id": "ensure-app-auth-tokens",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.509Z",
+            "duration_in_millis": 43,
+            "completed": "2019-01-27T23:26:59.552Z",
+            "step_id": "validate-plan-prerequisites",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.559Z",
+            "duration_in_millis": 16,
+            "completed": "2019-01-27T23:26:59.575Z",
+            "step_id": "suspend-snapshotting",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:26:59.580Z",
+            "duration_in_millis": 1147,
+            "completed": "2019-01-27T23:27:00.727Z",
+            "step_id": "wait-for-index-curation-lock",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:00.734Z",
+            "duration_in_millis": 142,
+            "completed": "2019-01-27T23:27:00.876Z",
+            "step_id": "add-shield-user",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:00.883Z",
+            "duration_in_millis": 12,
+            "completed": "2019-01-27T23:27:00.895Z",
+            "step_id": "validate-enough-disk-space",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:00.918Z",
+            "duration_in_millis": 14,
+            "completed": "2019-01-27T23:27:00.932Z",
+            "step_id": "get-snapshot-settings",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:00.943Z",
+            "duration_in_millis": 20,
+            "completed": "2019-01-27T23:27:00.963Z",
+            "step_id": "check-enterprise-license",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:00.977Z",
+            "duration_in_millis": 21,
+            "completed": "2019-01-27T23:27:00.998Z",
+            "step_id": "resolve-current-instance-states",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:01.020Z",
+            "duration_in_millis": 330,
+            "completed": "2019-01-27T23:27:01.350Z",
+            "step_id": "configure-auto-expand-indexes",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:01.360Z",
+            "duration_in_millis": 22,
+            "completed": "2019-01-27T23:27:01.382Z",
+            "step_id": "create-elasticsearch-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:01.400Z",
+            "duration_in_millis": 523,
+            "completed": "2019-01-27T23:27:01.923Z",
+            "step_id": "generate-node-certificates",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:01.934Z",
+            "duration_in_millis": 275,
+            "completed": "2019-01-27T23:27:02.209Z",
+            "step_id": "allocate-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:02.391Z",
+            "duration_in_millis": 323,
+            "completed": "2019-01-27T23:27:02.714Z",
+            "step_id": "set-quorum-size",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:02.725Z",
+            "duration_in_millis": 22,
+            "completed": "2019-01-27T23:27:02.747Z",
+            "step_id": "override-instance-data",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:02.758Z",
+            "duration_in_millis": 38,
+            "completed": "2019-01-27T23:27:02.796Z",
+            "step_id": "seed-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:02.814Z",
+            "duration_in_millis": 20,
+            "completed": "2019-01-27T23:27:02.834Z",
+            "step_id": "start-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:27:02.842Z",
+            "duration_in_millis": 421444,
+            "completed": "2019-01-27T23:34:04.286Z",
+            "step_id": "wait-until-running",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:04.296Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:04.305Z",
+            "step_id": "wait-until-masters-elected",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:04.311Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:04.320Z",
+            "step_id": "verify-non-split",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:09.413Z",
+            "duration_in_millis": 34,
+            "completed": "2019-01-27T23:34:09.447Z",
+            "step_id": "set-quorum-size",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:09.454Z",
+            "duration_in_millis": 18,
+            "completed": "2019-01-27T23:34:09.472Z",
+            "step_id": "set-maintenance",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:14.539Z",
+            "duration_in_millis": 14,
+            "completed": "2019-01-27T23:34:14.553Z",
+            "step_id": "apply-transient-deployment-settings",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:14.560Z",
+            "duration_in_millis": 326,
+            "completed": "2019-01-27T23:34:14.886Z",
+            "step_id": "run-index-curation",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:14.892Z",
+            "duration_in_millis": 464,
+            "completed": "2019-01-27T23:34:15.356Z",
+            "step_id": "migrate-data",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:15.377Z",
+            "duration_in_millis": 108,
+            "completed": "2019-01-27T23:34:15.485Z",
+            "step_id": "set-quorum-size",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:15.491Z",
+            "duration_in_millis": 14,
+            "completed": "2019-01-27T23:34:15.505Z",
+            "step_id": "set-maintenance",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.612Z",
+            "duration_in_millis": 16,
+            "completed": "2019-01-27T23:34:20.628Z",
+            "step_id": "stop-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.635Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:20.644Z",
+            "step_id": "wait-until-stopped",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.650Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:20.659Z",
+            "step_id": "wait-until-masters-elected",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.666Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:20.675Z",
+            "step_id": "verify-non-split",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.682Z",
+            "duration_in_millis": 19,
+            "completed": "2019-01-27T23:34:20.701Z",
+            "step_id": "deallocate-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.708Z",
+            "duration_in_millis": 17,
+            "completed": "2019-01-27T23:34:20.725Z",
+            "step_id": "wait-until-deallocated",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:20.732Z",
+            "duration_in_millis": 1083,
+            "completed": "2019-01-27T23:34:21.815Z",
+            "step_id": "delete-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:21.823Z",
+            "duration_in_millis": 25,
+            "completed": "2019-01-27T23:34:21.848Z",
+            "step_id": "resize-instances",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:21.857Z",
+            "duration_in_millis": 17,
+            "completed": "2019-01-27T23:34:21.874Z",
+            "step_id": "resolve-current-instance-states",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:21.885Z",
+            "duration_in_millis": 2784,
+            "completed": "2019-01-27T23:34:24.669Z",
+            "step_id": "ensure-repository",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:24.678Z",
+            "duration_in_millis": 254,
+            "completed": "2019-01-27T23:34:24.932Z",
+            "step_id": "apply-deployment-license",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:24.941Z",
+            "duration_in_millis": 17,
+            "completed": "2019-01-27T23:34:24.958Z",
+            "step_id": "apply-monitoring-config",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:24.972Z",
+            "duration_in_millis": 14,
+            "completed": "2019-01-27T23:34:24.986Z",
+            "step_id": "apply-curation-settings",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:24.994Z",
+            "duration_in_millis": 9,
+            "completed": "2019-01-27T23:34:25.003Z",
+            "step_id": "update-remote-deployments",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:25.011Z",
+            "duration_in_millis": 485,
+            "completed": "2019-01-27T23:34:25.496Z",
+            "step_id": "post-plan-cleanup",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:25.504Z",
+            "duration_in_millis": 197,
+            "completed": "2019-01-27T23:34:25.701Z",
+            "step_id": "clean-up",
+            "info_log": [],
+            "stage": "completed"
+          },
+          {
+            "status": "success",
+            "started": "2019-01-27T23:34:25.716Z",
+            "duration_in_millis": 0,
+            "completed": "2019-01-27T23:34:25.716Z",
+            "step_id": "plan-completed",
+            "info_log": [],
+            "stage": "completed"
+          }
+        ],
+        "plan": {
+          "deployment_topology": [
+            {
+              "zone_count": 2,
+              "node_type": {
+                "data": true,
+                "master": true,
+                "ingest": true,
+                "ml": false
+              },
+              "instance_configuration_id": "aws.data.highio.i3",
+              "elasticsearch": {
+                "user_plugins": [],
+                "system_settings": {
+                  "reindex_whitelist": [],
+                  "http": {
+                    "cors_enabled": false,
+                    "cors_allow_credentials": false,
+                    "cors_max_age": 1728000,
+                    "compression": true
+                  },
+                  "monitoring_history_duration": "3d",
+                  "monitoring_collection_interval": -1,
+                  "destructive_requires_name": false,
+                  "auto_create_index": true,
+                  "use_disk_threshold": true,
+                  "scripting": {
+                    "inline": {
+                      "enabled": true
+                    },
+                    "stored": {
+                      "enabled": true
+                    }
+                  },
+                  "enable_close_index": false
+                },
+                "user_bundles": [],
+                "enabled_built_in_plugins": [
+                  "ingest-geoip",
+                  "ingest-user-agent"
+                ]
+              },
+              "size": {
+                "resource": "memory",
+                "value": 4096
+              }
+            },
+            {
+              "zone_count": 3,
+              "node_type": {
+                "data": false,
+                "master": true,
+                "ingest": false,
+                "ml": false
+              },
+              "instance_configuration_id": "aws.master.r4",
+              "elasticsearch": {
+                "user_plugins": [],
+                "system_settings": {
+                  "reindex_whitelist": [],
+                  "http": {
+                    "cors_enabled": false,
+                    "cors_allow_credentials": false,
+                    "cors_max_age": 1728000,
+                    "compression": true
+                  },
+                  "monitoring_history_duration": "3d",
+                  "monitoring_collection_interval": -1,
+                  "destructive_requires_name": false,
+                  "auto_create_index": true,
+                  "use_disk_threshold": true,
+                  "scripting": {
+                    "inline": {
+                      "enabled": true
+                    },
+                    "stored": {
+                      "enabled": true
+                    }
+                  },
+                  "enable_close_index": false
+                },
+                "user_bundles": [],
+                "enabled_built_in_plugins": [
+                  "ingest-geoip",
+                  "ingest-user-agent"
+                ]
+              },
+              "size": {
+                "resource": "memory",
+                "value": 0
+              }
+            },
+            {
+              "zone_count": 1,
+              "node_type": {
+                "data": false,
+                "master": false,
+                "ingest": false,
+                "ml": true
+              },
+              "instance_configuration_id": "aws.ml.m5",
+              "elasticsearch": {
+                "user_plugins": [],
+                "system_settings": {
+                  "reindex_whitelist": [],
+                  "http": {
+                    "cors_enabled": false,
+                    "cors_allow_credentials": false,
+                    "cors_max_age": 1728000,
+                    "compression": true
+                  },
+                  "monitoring_history_duration": "3d",
+                  "monitoring_collection_interval": -1,
+                  "destructive_requires_name": false,
+                  "auto_create_index": true,
+                  "use_disk_threshold": true,
+                  "scripting": {
+                    "inline": {
+                      "enabled": true
+                    },
+                    "stored": {
+                      "enabled": true
+                    }
+                  },
+                  "enable_close_index": false
+                },
+                "user_bundles": [],
+                "enabled_built_in_plugins": [
+                  "ingest-geoip",
+                  "ingest-user-agent"
+                ]
+              },
+              "size": {
+                "resource": "memory",
+                "value": 0
+              }
+            }
+          ],
+          "transient": {
+            "plan_configuration": {
+              "move_allocators": [],
+              "skip_upgrade_checker": false,
+              "reallocate_instances": false,
+              "skip_post_upgrade_steps": false,
+              "skip_snapshot": false,
+              "preferred_allocators": [],
+              "skip_data_migration": false,
+              "calm_wait_time": 5,
+              "timeout": 16384,
+              "move_only": false,
+              "override_failsafe": false,
+              "extended_maintenance": false,
+              "max_snapshot_attempts": 3,
+              "move_instances": []
+            },
+            "strategy": {
+              "grow_and_shrink": {}
+            }
+          },
+          "elasticsearch": {
+            "system_settings": {
+              "use_disk_threshold": true
+            },
+            "version": "6.5.4"
+          },
+          "tiebreaker_topology": {
+            "memory_per_node": 1024
+          },
+          "deployment_template": {
+            "id": "aws-io-optimized"
+          }
+        },
+        "plan_attempt_id": "456",
+        "attempt_start_time": "2019-01-27T23:26:59.316Z"
+      },
+      "history": []
+    },
+    "elasticsearch": {
+      "healthy": true,
+      "shard_info": {
+        "healthy": true,
+        "unavailable_shards": [
+          {
+            "instance_name": "instance-0000000000",
+            "shard_count": 0
+          },
+          {
+            "instance_name": "tiebreaker-0000000003",
+            "shard_count": 0
+          },
+          {
+            "instance_name": "instance-0000000001",
+            "shard_count": 0
+          }
+        ],
+        "unavailable_replicas": [
+          {
+            "instance_name": "instance-0000000000",
+            "replica_count": 0
+          },
+          {
+            "instance_name": "tiebreaker-0000000003",
+            "replica_count": 0
+          },
+          {
+            "instance_name": "instance-0000000001",
+            "replica_count": 0
+          }
+        ],
+        "available_shards": [
+          {
+            "instance_name": "instance-0000000000",
+            "shard_count": 4
+          },
+          {
+            "instance_name": "tiebreaker-0000000003",
+            "shard_count": 4
+          },
+          {
+            "instance_name": "instance-0000000001",
+            "shard_count": 4
+          }
+        ]
+      },
+      "master_info": {
+        "healthy": true,
+        "instances_with_no_master": [],
+        "masters": [
+          {
+            "instances": [
+              "instance-0000000000",
+              "tiebreaker-0000000003",
+              "instance-0000000001"
+            ],
+            "master_node_id": "BAR1",
+            "master_instance_name": "instance-0000000001"
+          }
+        ]
+      },
+      "blocking_issues": {
+        "healthy": true,
+        "deployment_level": [],
+        "index_level": []
+      }
+    },
+    "external_links": [],
+    "system_alerts": [],
+    "deployment_id": "deployment1",
+    "security": {
+      "users_roles": [],
+      "roles": {},
+      "last_modified": "2019-02-15T04:28:23.629Z",
+      "users": [],
+      "version": 2
+    },
+    "associated_kibana_deployments": [
+      {
+        "kibana_id": "kibana1",
+        "enabled": true,
+        "links": {}
+      }
+    ],
+    "topology": {
+      "healthy": true,
+      "instances": [
+        {
+          "service_roles": [
+            "data",
+            "master",
+            "ingest"
+          ],
+          "container_started": true,
+          "zone": "us-east-1a",
+          "service_version": "6.5.4",
+          "healthy": true,
+          "maintenance_mode": false,
+          "instance_name": "instance-0000000000",
+          "instance_configuration": {
+            "resource": "memory",
+            "id": "aws.data.highio.i3",
+            "name": "aws.data.highio.i3"
+          },
+          "memory": {
+            "instance_capacity": 4096,
+            "memory_pressure": 67
+          },
+          "service_id": "pA4vNqHo2zIWRMw",
+          "disk": {
+            "disk_space_available": 122880,
+            "storage_multiplier": 30,
+            "disk_space_used": 0
+          },
+          "allocator_id": "i-123",
+          "service_running": true
+        },
+        {
+          "service_roles": [
+            "master"
+          ],
+          "container_started": true,
+          "zone": "us-east-1e",
+          "service_version": "6.5.4",
+          "healthy": true,
+          "maintenance_mode": false,
+          "instance_name": "tiebreaker-0000000003",
+          "instance_configuration": {
+            "resource": "memory",
+            "id": "aws.master.r4",
+            "name": "aws.master.r4"
+          },
+          "memory": {
+            "instance_capacity": 1024,
+            "memory_pressure": 22
+          },
+          "service_id": "6x5j0WrvSTZB7MHA",
+          "disk": {
+            "disk_space_available": 2048,
+            "storage_multiplier": 2,
+            "disk_space_used": 0
+          },
+          "allocator_id": "i-122",
+          "service_running": true
+        },
+        {
+          "service_roles": [
+            "data",
+            "master",
+            "ingest"
+          ],
+          "container_started": true,
+          "zone": "us-east-1b",
+          "service_version": "6.5.4",
+          "healthy": true,
+          "maintenance_mode": false,
+          "instance_name": "instance-0000000001",
+          "instance_configuration": {
+            "resource": "memory",
+            "id": "aws.data.highio.i3",
+            "name": "aws.data.highio.i3"
+          },
+          "memory": {
+            "instance_capacity": 4096,
+            "memory_pressure": 38
+          },
+          "service_id": "6s7f8s",
+          "disk": {
+            "disk_space_available": 122880,
+            "storage_multiplier": 30,
+            "disk_space_used": 0
+          },
+          "allocator_id": "i-123",
+          "service_running": true
+        }
+      ]
+    }
+  }
