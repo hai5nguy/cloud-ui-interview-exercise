@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import NewRoute from "./components/NewRoute";
+import Deployments from "./components/deployments/Deployments";
+
 import {
   EuiPage,
   EuiPageSideBar,
@@ -30,10 +32,13 @@ class App extends Component {
               <Link to="/">Home</Link>
               <EuiSpacer/>
               <Link to="/new">Additional Route</Link>
+              <EuiSpacer/>
+              <Link to="/deployments">Deployments</Link>
             </EuiPageSideBar>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Deployments} />
               <Route exact path="/new" component={NewRoute} />
+              <Route exact path="/deployments" component={Deployments} />
             </Switch>
           </EuiPage>
         </div>
