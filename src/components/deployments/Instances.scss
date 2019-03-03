@@ -1,0 +1,32 @@
+@import "../../App.scss";
+
+.instances {
+  .scrollPanel {
+    margin-top: 10px;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 0;
+  }
+  .card {
+    min-width: 300px;
+    margin: $euiSizeS;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .card.selected {
+    background: $euiColorPrimary;
+    .euiTitle {
+      color: white;
+    }
+  }
+  .detailsContainer {
+    margin: $euiSizeS 0 0 0;
+  }
+}

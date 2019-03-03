@@ -4,31 +4,50 @@ import {
   EuiCard,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiPanel
+  EuiPanel,
 } from "@elastic/eui";
 
+import Badges from "./Badges";
+import InstanceDetails from "./InstanceDetails";
+
+import "./Instances.scss";
+
 class Instances extends Component {
+  state = {
+    selectedInstanceIndex: 0
+  }
+
+  instanceClick = (selectedInstanceIndex) => () => {
+    this.setState({ selectedInstanceIndex })
+  }
+
   render() {
+    const { selectedInstanceIndex } = this.state;
     const { instances, deploymentName } = this.props;
-    
+
+    const instance = instances[selectedInstanceIndex]
+
     return (
-      <EuiPanel paddingSize="l" hasShadow style={{ textTransform: 'uppercase' }}>
+      <EuiPanel className="instances" paddingSize="l" hasShadow style={{ textTransform: "uppercase" }} >
         {deploymentName}
-        <EuiFlexGroup style={{ marginTop: 10 }}>
-        {
-          instances.map((instance, i) => (
-            <EuiFlexItem key={i} style={{ maxWidth: 300 }}>
+        <EuiFlexGroup className="scrollPanel" direction="column">
+          <EuiFlexItem className="cardContainer">
+            {instances.map((instance, i) => (
               <EuiCard
+                key={i}
+                className={`card ${i === selectedInstanceIndex ? 'selected' : ''}`}
                 icon={<EuiIcon size="xxl" type={`infraApp`} />}
                 title={instance.instance_name}
-                description={instance.zone}
-                onClick={() => window.alert('Card clicked')}
+                description={<Badges instance={instance} />}
+                onClick={this.instanceClick(i)}
               />
-            </EuiFlexItem>
-          ))
-        }
-      </EuiFlexGroup>
-      </EuiPanel>
+            ))}
+          </EuiFlexItem>
+          <EuiFlexItem className="detailsContainer">
+            <InstanceDetails instance={instance} />
+          </EuiFlexItem>
+        </EuiFlexGroup>
+      </EuiPanel >
     );
   }
 }
